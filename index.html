@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Finate - Job Portal Website Template Using Bootstrap 5" />
+  <meta name="keywords" content="accessories, digital products, electronic html, modern, products, responsive" />
+  <meta name="author" content="hastech" />
+   <link rel="stylesheet" href="rp.css">
+  <title>DRP Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+
+  <style>
+    .containerh {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .registration-heading {
+      margin-bottom: 30px;
+    }
+
+    .footer-basic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-basic footer {
+      margin-top: 20px;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-6JoNM6RRisSjzSxv7Kb8r9tAlU7aIkg8DQjbVN2kK+blEQCsoGZqmzayD1NsbLmX"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $(".btn-group button").click(function () {
+        $(".btn-group button").removeClass("active");
+        $(this).addClass("active");
+        if ($(this).hasClass("btn-primary")) {
+          $(".registration-heading").text("Student Registration");
+        } else if ($(this).hasClass("btn-secondary")) {
+          $(".registration-heading").text("Company Registration");
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="containerh">
+    <img class="logo"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsd9wYkNnPXEk_NrUKhN-lkoWnVpEianPhHw&usqp=CAU">
+    <h3>Digital Recruiting Platform</h3>
+  </div>
+
+  <div class="container">
+    <div class="registration mx-auto d-block w-1">
+      <div class="page-header text-center">
+        <h1 class="registration-heading">Student Registration</h1>
+      </div>
+
+      <div class="btn-group d-flex mb-3">
+        <button type="button" class="btn btn-primary mr-1">Student</button>
+        <button type="button" class="btn btn-secondary">Company</button>
+      </div>
+
+      <form id="member-registration" action="/astroidnew/index.php/pages/register?task=registration.register"
+        method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
+        <fieldset>
+       
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Username *</label>
+            <input type="text" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email Address *</label>
+            <input type="email" class="form-control" id="exampleInputEmail1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password *</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password *</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="form-group d-flex justify-content-start">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="form-check form-group d-flex justify-content-end">
+              <a href="#">Already Have an Account?</a>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-linkedin"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Digital Recruitment PLatform © 2023</p>
+        <p class="copyright">Powered by StudyMonk</p>
+        <p class="copyright">Devloped by SivaMula</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
